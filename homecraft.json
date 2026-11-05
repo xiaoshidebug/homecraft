@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "name": "My Home",
+  "name": "开发者小石的家",
   "url": "",
   "logo": "assets/favicon.png",
-  "intro": "",
+  "intro": "十年程序员、支付系统架构师的三维小院，欢迎来坐坐、喝喝茶。",
   "lang": ["zh", "en"],
   "homecraft": true
 }

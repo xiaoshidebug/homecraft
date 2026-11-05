@@ -1,5 +1,5 @@
 export default {
-  name: '',
+  name: '开发者小石的家',
   // 64×64 PNG, 4px arms, ≤ 18000 bytes. docs/avatar.md
   skin: '',
   languages: ['zh', 'en'],
