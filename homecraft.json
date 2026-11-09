@@ -4,6 +4,14 @@
   "url": "",
   "logo": "assets/favicon.png",
   "intro": "十年程序员、支付系统架构师的三维小院，欢迎来坐坐、喝喝茶。",
-  "lang": ["zh", "en"],
-  "homecraft": true
+  "lang": [
+    "zh",
+    "en"
+  ],
+  "homecraft": true,
+  "doors": [
+    "https://terryhu.cn/",
+    "https://xinglong.tech/",
+    "https://rsliyu.com/"
+  ]
 }

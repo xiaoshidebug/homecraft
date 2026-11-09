@@ -36,6 +36,14 @@ export const STATIONS = [
 export const MAILBOX = { x: 0.5, z: 25.5, yaw: Math.PI };
 export const PORTAL = { x: 8, z: 25.5, yaw: Math.PI };
 
+// 单项传送门：地面光圈，走进即前往 target（类似超链接，一个光圈只指向一个世界）。
+// target 建议同时抄进 homecraft.json 的 doors 字段，别的世界才能在地图上连出关系线。
+export const DOORS = [
+  { x: 14.5, z: 21, target: 'https://terryhu.cn/', name: "Terry's Home" },
+  { x: 4.5, z: 21, target: 'https://xinglong.tech/', name: '石兴龙的小岛' },
+  { x: -6, z: 21, target: 'https://rsliyu.com/', name: 'rsliyu' },
+];
+
 // 猫在院里与后花园巡游，狗在前广场迎客（宠物只走地面层，引擎自动寻路）
 const inCourtyard = (x, z) => x > -21 && x < 17 && z > -21 && z < 11;
 export const PETS = {
