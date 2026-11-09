@@ -42,4 +42,10 @@ For future updates, see the [update guide](engine/UPDATING.md).
 
 The portal lists personal websites and lets visitors travel between them, much like links between blogs.
 
+### One-way doors and the world map
+
+Besides the list, every world can place **one-way doors**: glowing rings on the ground framed by a small gate — step on one and you leave for its single destination, like a hyperlink. The sign above reads the destination's name and logo automatically.
+
+Press **M** (or the map button in the top corner) to open the **world map**: the portal network drawn as a relationship graph on old chart paper, with one-way doors as its edges, discovered recursively from each world's links. Listed worlds without door links ring the outside. Hover a node for details, click to travel. To let others link to you, mirror your door targets into the `doors` field of `homecraft.json`.
+
 ## Links [🔗 LINUX DO](https://linux.do)

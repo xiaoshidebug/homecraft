@@ -79,7 +79,19 @@ Skins change only the visitor's local character appearance and do not represent 
 
 Storage is isolated by website path, with each browser history entry retaining its visit's skin. With `sessionStorage` disabled, the current page can still receive and pass on a skin, but reloading may lose it. Compatibility checks must cover the receiver's actual behavior.
 
-## 4. Constraints
+## 4. One-Way Doors and the World Map
+
+A world may place one-way doors: glowing ground rings framed by a small gate that carry a visitor to their single destination when stepped on. `DOORS` in `world/layout.js` defines them, and the destinations are mirrored into the optional `doors` array in `homecraft.json` so other worlds can read them without visiting:
+
+```json
+"doors": ["https://b.example/", "https://c.example/"]
+```
+
+- Entries are `https://` URLs (`http://` for local testing), at most 16. Readers deduplicate by world identity and drop the site itself.
+- The field is optional and additive. Readers must treat a missing, malformed or over-length `doors` entry as absent, and must ignore fields they do not know.
+- The world map reads the public directory once and each listed site's `homecraft.json` on demand, following `doors` outward like links to draw the network as a relationship graph. Reading is best-effort: a failed or missing read never blocks navigation, and worlds without published doors simply have no relationship lines.
+
+## 5. Constraints
 
 - The site's `Referrer-Policy` must allow portal navigation to carry the origin.
 - Links carry protocol fields only. Accounts, email addresses, and other identity information must not appear in links.

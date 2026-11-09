@@ -231,3 +231,4 @@ The portal connects independently deployed websites; see [docs/protocol.md](docs
 - Link formats follow `engine/door-protocol.js`, `engine/portal.js`, and `engine/traveller.js`. The public directory URL follows `engine/config.js`.
 - `Referrer-Policy` preserves the origin. Links contain only public URLs — no account IDs, email addresses, or other identity information.
 - The listing entry point is the main repository's ["Request listing"](https://github.com/terryHu7/homecraft/issues/new/choose); see [docs/worlds.md](docs/worlds.md) for the process. `directory/` is only maintained in the main repository.
+- One-way door rings (`DOORS` in `world/layout.js`) and the world map (`M` key, or the corner map button) extend the portal: doors are the edges of the map's relationship graph, fed by the optional `doors` field in `homecraft.json`. See [docs/protocol.md](docs/protocol.md) for the contract.
